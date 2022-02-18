@@ -17,7 +17,7 @@ st.caption("<font color=‘blue’>Advertencia, realizar esta prueba de deteccio
 col1, col2 = st.columns(2)
 
 with col1:
-    Age = st.number_input('Inserte su edad',format="%i")
+    Age = st.number_input('Inserte su edad',min_value=18,max_value=90)
     BMI = st.number_input('Inserte su indice de masa corporal')
     Renal= st.radio(
      "Usted ha sufrido de falla renal?",
