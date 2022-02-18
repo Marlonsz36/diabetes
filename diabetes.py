@@ -18,12 +18,12 @@ col1, col2 = st.columns(2)
 
 with col1:
     Age = st.number_input('Inserte su edad',min_value=18,max_value=90)
-    BMI = st.number_input('Inserte su indice de masa corporal')
+    BMI = st.number_input('Inserte su indice de masa corporal',min_value=15.00)
     Renal= st.radio(
      "Usted ha sufrido de falla renal?",
      ('Si', 'No'))
-    Lactate = st.number_input('Inserte su concentración de lactato')
-    Calcium = st.number_input('Inserte su concentración de calcio')
+    Lactate = st.number_input('Inserte su concentración de lactato',min_value=15.00)
+    Calcium = st.number_input('Inserte su concentración de calcio',min_value=15.00)
 
 with col2:
     etnic = st.selectbox(
@@ -33,8 +33,8 @@ with col2:
     Respiratory = st.radio(
      "Ha recibido recientemente ventilacion invasiva(intubacion)?",
      ('Si', 'No'))
-    Hemoglobin = st.number_input('Inserte su concentración de hemoglobina')
-    Creatinine = st.number_input('Inserte su concentración de creatinina')
+    Hemoglobin = st.number_input('Inserte su concentración de hemoglobina',min_value=15.00)
+    Creatinine = st.number_input('Inserte su concentración de creatinina',min_value=15.00)
 
 
 def binario(sino):
