@@ -3,3 +3,4 @@ joblib
 sklearn
 pandas
 imblearn
+xgboost
