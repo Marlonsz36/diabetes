@@ -17,7 +17,7 @@ st.caption("<font color=‘blue’>Advertencia, realizar esta prueba de deteccio
 col1, col2 = st.columns(2)
 
 with col1:
-    Age = st.number_input('Inserte su edad')
+    Age = st.number_input('Inserte su edad',format=%i)
     BMI = st.number_input('Inserte su indice de masa corporal')
     Renal= st.radio(
      "Usted ha sufrido de falla renal?",
@@ -66,7 +66,7 @@ df = pd.DataFrame(
 
 #st.dataframe(df)  # Same as st.write(df)
 
-if (st.button('Diagnositcar')):
+if (st.button('Diagnosticar')):
     with st.spinner('Por Favor espere...'):
         time.sleep(7)
     diabetes=modelo.predict(df)
