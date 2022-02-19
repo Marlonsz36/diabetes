@@ -28,7 +28,7 @@ with col1:
 with col2:
     etnic = st.selectbox(
          'Ingrese el grupo éntico al que pertenece',
-         ('Caucásico', 'Americano', 'Asiático', "Hispano", "Otros"))
+         ('Caucásico', 'Nativo Americano','Africano Americano', 'Asiático', "Hispano", "Otros"))
     Glucose = st.number_input('Inserte su nivel de glucosa')
     Respiratory = st.radio(
      "Ha recibido recientemente ventilacion invasiva(intubacion)?",
@@ -47,8 +47,10 @@ def binario(sino):
 def etnia(valor):
         if(valor=="Caucásico"):
             return "Caucasian"
-        elif(valor=="Americano"):
-            return "American"
+        elif(valor=="Nativo Americano"):
+            return "Native American"
+        elif(valor=="Africano Americano"):
+            return "African American"
         elif(valor=="Asiático"):
             return "Asian"
         elif(valor=="Hispano"):
