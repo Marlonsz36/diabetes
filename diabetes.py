@@ -19,9 +19,9 @@ col1, col2 = st.columns(2)
 with col1:
     Age = st.number_input('Inserte su edad',min_value=18,max_value=90)
     BMI = st.number_input('Inserte su indice de masa corporal',min_value=15.00)
-    Renal= st.radio(
-     "Usted ha sufrido de falla renal?",
-     ('Si', 'No'))
+    #Renal= st.radio(
+     #"Usted ha sufrido de falla renal?",
+    # ('Si', 'No'))
     Lactate = st.number_input('Inserte su concentración de lactato',min_value=0.00)
     Calcium = st.number_input('Inserte su concentración de calcio',min_value=0.00)
 
@@ -30,18 +30,18 @@ with col2:
          'Ingrese el grupo éntico al que pertenece',
          ('Caucásico', 'Nativo Americano','Africano Americano', 'Asiático', "Hispano", "Otros"))
     Glucose = st.number_input('Inserte su nivel de glucosa')
-    Respiratory = st.radio(
-     "Ha recibido recientemente ventilacion invasiva(intubacion)?",
-     ('Si', 'No'))
+   # Respiratory = st.radio(
+    # "Ha recibido recientemente ventilacion invasiva(intubacion)?",
+    # ('Si', 'No'))
     Hemoglobin = st.number_input('Inserte su concentración de hemoglobina',min_value=0.00)
     Creatinine = st.number_input('Inserte su concentración de creatinina',min_value=0.00)
 
 
-def binario(sino):
-        if(sino== "Si"):
-            return 1
-        elif(sino== "No"):
-            return 0
+#def binario(sino):
+ #       if(sino== "Si"):
+  #          return 1
+   #     elif(sino== "No"):
+    #        return 0
         
         
 def etnia(valor):
@@ -63,7 +63,7 @@ def glycosilated(Glucosa):
 modelo=joblib.load("diabetes.pkl")
 #data={"glucose":30,"bmi":75,"arf":0,"age":45,"ventilated":0,"etnic":"Caucasican","hemaglobin":65,"glucosylated_hemaglobin":5.8,"lactate":50,"creatinine":50,"calcium":50}
 df = pd.DataFrame(
-    [[Glucose,BMI,binario(Renal),Age,binario(Respiratory),etnia(etnic),Hemoglobin,glycosilated(Glucose),Lactate,Creatinine,Calcium]],
+    [[Glucose,BMI,0,Age,0,etnia(etnic),Hemoglobin,glycosilated(Glucose),Lactate,Creatinine,Calcium]],
     columns=("glucose", "bmi","arf","age","ventilated","ethnicity","d1_hemaglobin_max","glycosylated_hemoglobin","d1_lactate_max","creatinine","d1_calcium_max"))
 
 #st.dataframe(df)  # Same as st.write(df)
