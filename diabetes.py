@@ -22,8 +22,8 @@ with col1:
     Renal= st.radio(
      "Usted ha sufrido de falla renal?",
      ('Si', 'No'))
-    Lactate = st.number_input('Inserte su concentración de lactato',min_value=15.00)
-    Calcium = st.number_input('Inserte su concentración de calcio',min_value=15.00)
+    Lactate = st.number_input('Inserte su concentración de lactato',min_value=0.00)
+    Calcium = st.number_input('Inserte su concentración de calcio',min_value=0.00)
 
 with col2:
     etnic = st.selectbox(
@@ -33,8 +33,8 @@ with col2:
     Respiratory = st.radio(
      "Ha recibido recientemente ventilacion invasiva(intubacion)?",
      ('Si', 'No'))
-    Hemoglobin = st.number_input('Inserte su concentración de hemoglobina',min_value=15.00)
-    Creatinine = st.number_input('Inserte su concentración de creatinina',min_value=15.00)
+    Hemoglobin = st.number_input('Inserte su concentración de hemoglobina',min_value=0.00)
+    Creatinine = st.number_input('Inserte su concentración de creatinina',min_value=0.00)
 
 
 def binario(sino):
