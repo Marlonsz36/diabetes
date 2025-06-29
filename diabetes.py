@@ -72,7 +72,7 @@ if (st.button('Diagnosticar')):
     with st.spinner('Por Favor espere...'):
         time.sleep(7)
     #diabetes=modelo.predict(df)
-    diabetes=1
+    diabetes=0
     if(diabetes==1):
         st.error("Desafortunadamente los resultados indican que puedes tener diabetes, te recomendamos que te realices exámenes más especializados para ver tu tratamiento")
     elif(diabetes==0):
