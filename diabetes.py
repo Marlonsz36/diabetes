@@ -9,7 +9,7 @@ import streamlit as st
 import joblib 
 import pandas as pd
 import time
-st.image("logo.png",use_column_width=True)
+st.image("logo.png",use_container_width=True)
 
 st.title("Detección temprana de diabetes")
 st.caption("<font color=‘blue’>Advertencia, realizar esta prueba de deteccion temprana una vez se haga hecho pruebas de quimica sanguinea y prueba de orina</font>", unsafe_allow_html=True)
@@ -76,4 +76,4 @@ if (st.button('Diagnosticar')):
         st.error("Desafortunadamente los resultados indican que puedes tener diabetes, te recomendamos que te realices exámenes más especializados para ver tu tratamiento")
     elif(diabetes==0):
         st.success("Los resultados indican que por el momento no corres riesgo de diabetes, pero te dejamos la siguiente información de prevención")
-        st.image("infodiabetes.jpg",use_column_width=True)
+        st.image("infodiabetes.jpg",use_container_width=True)
